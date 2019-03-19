@@ -31,3 +31,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // configure express to
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
 });
+
+app.get('/', (req,res) => {
+    res.render('index', {hello: 'World'});
+})
