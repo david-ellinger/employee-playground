@@ -3,9 +3,8 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const path = require('path');
 const app = express();
-
 const port = 5000;
-
+const {getHomePage} = require('./routes/index');
 const db = mysql.createConnection({
     host:'localhost',
     user: 'user',
@@ -32,6 +31,4 @@ app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
 });
 
-app.get('/', (req,res) => {
-    res.render('index', {hello: 'World'});
-})
+app.get('/', getHomePage);

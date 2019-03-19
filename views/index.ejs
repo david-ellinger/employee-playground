@@ -1,3 +1,15 @@
 <div>
-    Hello <%=hello %>
+    Hello <%=title %>
+    <hr />
+
+    <% if(employees.length) {
+    %><ul>
+       <% employees.forEach((e) => {
+        %>
+        <li> <%= e.emp_no %> </li>
+        <%
+       })%>
+    </ul><%
+    }
+    %>
 </div>
