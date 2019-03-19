@@ -1,15 +1,23 @@
-<div>
-    Hello <%=title %>
-    <hr />
-
+<% include partials/head %> 
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>   
+                <th> ID </th>
+            </tr>
+        </thead>
+    <tbody>
     <% if(employees.length) {
-    %><ul>
+    %>
        <% employees.forEach((e) => {
         %>
-        <li> <%= e.emp_no %> </li>
+        <tr>
+        <td> <%= e.emp_no %> </td>
+        </tr>
         <%
        })%>
-    </ul><%
+    <%
     }
     %>
+    </tbody>
 </div>
