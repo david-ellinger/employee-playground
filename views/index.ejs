@@ -1,23 +1,19 @@
 <% include partials/head %> 
 <div class="container">
+    <h2>Employees</h2>
     <table class="table">
-        <thead>
+        <thead class="thead-dark">
             <tr>   
                 <th> ID </th>
             </tr>
         </thead>
     <tbody>
-    <% if(employees.length) {
-    %>
-       <% employees.forEach((e) => {
-        %>
+    <% if(employees.length) {%>
+       <% employees.forEach((e) => { %>
         <tr>
-        <td> <%= e.emp_no %> </td>
+            <td> <%= e.emp_no %> </td>
         </tr>
-        <%
-       })%>
-    <%
-    }
-    %>
+       <%})%>
+    <%}%>
     </tbody>
 </div>
