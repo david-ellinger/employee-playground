@@ -4,7 +4,8 @@
   "description": "- Simple web application showing employees and their salaries based on department.\r - Used as a fun sandbox to try different things.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx nodemon -L ./app.js",
+    "start": "node ./app.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +16,8 @@
     "express-fileupload": "^1.1.3-alpha.1",
     "mysql": "^2.16.0",
     "req-flash": "0.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
